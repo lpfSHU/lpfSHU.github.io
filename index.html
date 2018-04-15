@@ -238,6 +238,15 @@
         
         
           
+  <li class="menu-item menu-item-js">
+    <a href="/categories/js/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />js</a>
+</li>
+
+      
+        
+        
+          
   <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
@@ -275,6 +284,318 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/15/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lpf">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lpf's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/15/正则表达式/" itemprop="url">正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T18:55:06+08:00">2018-04-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="js正则表达式"><a href="#js正则表达式" class="headerlink" title="js正则表达式"></a>js正则表达式</h1><hr>
+<ul>
+<li><h2 id="RegExp对象"><a href="#RegExp对象" class="headerlink" title="RegExp对象"></a>RegExp对象</h2><h4 id="实例化RegExp对象"><a href="#实例化RegExp对象" class="headerlink" title="实例化RegExp对象"></a>实例化RegExp对象</h4><ol>
+<li><p>字面量</p>
+<p><code>var reg = /\bis\b/g</code></p>
+</li>
+<li><p>构造函数</p>
+<p><code>var reg = new RegExp(&#39;\\bis\\b&#39;, &#39;g&#39;);</code></p>
+<p>g: global 执行全局匹配</p>
+<p>i: ignore case 执行对大小写不敏感的匹配</p>
+<p>m: multiple lines 多行搜索</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><h4 id="正则表达式由两种基本字符类型组成："><a href="#正则表达式由两种基本字符类型组成：" class="headerlink" title="正则表达式由两种基本字符类型组成："></a>正则表达式由两种基本字符类型组成：</h4><ol>
+<li><p>原义文本字符</p>
+</li>
+<li><p>元字符</p>
+</li>
+</ol>
+<h4 id="元字符是在正则表达式中有特殊含义的非字母字符"><a href="#元字符是在正则表达式中有特殊含义的非字母字符" class="headerlink" title="元字符是在正则表达式中有特殊含义的非字母字符"></a>元字符是在正则表达式中有特殊含义的非字母字符</h4><p>* + ? $ ^ . | \ ( ) { } [ ]</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h2><ol>
+<li><p>字符类</p>
+<p>我们可以使用元字符[]来构建一个简单的类，表达式[abc]把字符a或b或c归为一类，表达式可以匹配这类的字符。</p>
+</li>
+<li><p>字符类取反</p>
+<p>使用元字符^创建反向类／负向类</p>
+<p>反向类的意思是不属于某类的内容</p>
+<p>表达式[^abc]表示 不是字符a或b或c的内容</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="范围类"><a href="#范围类" class="headerlink" title="范围类"></a>范围类</h2><p>可以使用[a-z]来表示从a到z的任意字符，这是闭区间。</p>
+<p>在[]组成的类内部是可以连写的[a-zA-Z]</p>
+<p>在类里面匹配横线 [a-z-]</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h2><img src="/2018/04/15/正则表达式/4.png">
+<p>.</p>
+<p>\d</p>
+<p>\D</p>
+<p>\s</p>
+<p>\S</p>
+<p>\w</p>
+<p>\W</p>
+<h4 id="练习：匹配一个ab-数字-任意字符的字符串"><a href="#练习：匹配一个ab-数字-任意字符的字符串" class="headerlink" title="练习：匹配一个ab+数字+任意字符的字符串"></a>练习：匹配一个ab+数字+任意字符的字符串</h4><p><code>ab\d.</code></p>
+<h4 id="边界匹配字符"><a href="#边界匹配字符" class="headerlink" title="边界匹配字符"></a>边界匹配字符</h4><p>^ ：以xxx开始，元字符的含义不是唯一的</p>
+<p>$ ：以xxx结束</p>
+<p>\b ：单词边界</p>
+<p>\B ：非单词边界</p>
+<h4 id="多行匹配行首："><a href="#多行匹配行首：" class="headerlink" title="多行匹配行首："></a>多行匹配行首：</h4><p>var aaa=‘@123\n@234\n@345’;</p>
+<p>aaa.replace(/^@\d/gm,’Q’);</p>
+<p>aaa.replace(/@\d/g,’Q’);</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><p>？</p>
+<p>+</p>
+<p>*</p>
+<p>{n}</p>
+<p>{n,m}</p>
+<p>{n,}</p>
+  <img src="/2018/04/15/正则表达式/5.png">
+<p>例子：<code>\d{20}\w\d?\w+\d*\d{3}\w{3,5}\d{3,}</code></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="js正则贪婪模式与非贪婪模式"><a href="#js正则贪婪模式与非贪婪模式" class="headerlink" title="js正则贪婪模式与非贪婪模式"></a>js正则贪婪模式与非贪婪模式</h2><p><code>\d{3,6}</code> 匹配 <code>&#39;12345678&#39;</code></p>
+<p>默认是贪婪模式</p>
+<p>非贪婪模式：在量词后面加上 ?</p>
+<p><code>&#39;123456789&#39;.match(/\d{3,5}?/g)</code></p>
+<p><code>[&quot;123&quot;, &quot;456&quot;, &quot;789&quot;]</code></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p>使用()可以达到分组的功能，使量词作用于分组</p>
+<p><code>(Byron){3}</code></p>
+<h4 id="或-：使用-可以达到或的效果"><a href="#或-：使用-可以达到或的效果" class="headerlink" title="或 ：使用 | 可以达到或的效果"></a>或 ：使用 | 可以达到或的效果</h4><p><code>Byron|Casper</code></p>
+<p><code>Byr(on|Ca)sper</code></p>
+<h4 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h4><p><code>2015-12-25</code> =&gt; <code>12/25/2015</code></p>
+<p><code>&#39;2015-12-25&#39;.replace(/(\d{4})-(\d{2})-(\d{2})/g, &#39;$2/$3/$1&#39;)</code></p>
+<h4 id="忽略分组"><a href="#忽略分组" class="headerlink" title="忽略分组"></a>忽略分组</h4><p>不希望捕获某些分组，只需要在分组内加上<code>?:</code>就可以了</p>
+<p><code>(?:Byron).(ok)</code></p>
+<p>在开发中，我们经常会碰到将<code>abc-xyz</code>这类格式的字符串转为<code>AbcXyz</code>形式的驼峰字符串进行处理，请编写代码实现这个<code>camelize(str)</code>方法：</p>
+<pre>var camelize = function (str) {
+  return str.replace(/(?:^|[-_])(\w)/g, function(_, c) {
+         return c ? c.toUpperCase() : '';
+  });
+}</pre>
+
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h2><ol>
+<li><p>正则表达式从文本头部向尾部开始解析，文本尾部方向，称为‘前’</p>
+</li>
+<li><p>前瞻就是在正则表达式匹配到规则的时候，向前检查是否符合断言，后顾／后顾方向相反</p>
+</li>
+<li><p>Javascript不支持后顾</p>
+</li>
+<li><p>符合和不符合特定断言称为 肯定／正向匹配 和 否定／负向 匹配</p>
+</li>
+</ol>
+<p>正向前瞻：<code>exp(?=assert)</code></p>
+<p>负向前瞻：<code>exp(?!assert)</code></p>
+<p>正向后顾：<code>exp(?&lt;=assert)</code> js不支持</p>
+<p>负向后顾：<code>exp(?&lt;!assert)</code> js不支持</p>
+<p><code>&#39;a22*&#39;.replace(/\w(?=\d)/g, &#39;X&#39;)</code></p>
+<p><code>&quot;XX2*&quot;</code></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h2><ol>
+<li><p>global：是否全文搜索，默认false</p>
+</li>
+<li><p>ignoreCase：是否大小写敏感，默认false</p>
+</li>
+<li><p>multiline：多行搜索，默认false</p>
+</li>
+<li><p>lastIndex：是当前表达式匹配内容的最后一个字符的下一个位置</p>
+</li>
+<li><p>source：正则表达式的文本字符串</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h2 id="test和exec"><a href="#test和exec" class="headerlink" title="test和exec"></a>test和exec</h2><ol>
+<li><p>RegExp.prototype.test(str)</p>
+<p>测试当前正则是否能匹配目标字符串，返回 true 或 false。（类似于 String.search），如果正则表达式带有g修饰符，则每一次test方法都从上一次结束的位置开始向后匹配。如果正则模式是一个空字符串，则匹配所有字符串。</p>
+</li>
+<li><p>RegExp.prototype.exec(str)</p>
+<p>为指定的一段字符串str执行搜索匹配操作。它的返回值是一个数组或者 null。</p>
+</li>
+</ol>
+</li>
+</ul>
+<img src="/2018/04/15/正则表达式/1.png">
+<p>exec() 方法的功能非常强大，它是一个通用的方法，而且使用起来也比 test() 方法以及支持正则表达式的 String 对象的方法更为复杂。</p>
+<p>如果 exec() 找到了匹配的文本，则返回一个结果数组。否则，返回 null。此数组的第 0 个元素是与正则表达式相匹配的文本，第 1 个元素是与 RegExpObject 的第 1 个子表达式相匹配的文本（如果有的话），第 2 个元素是与 RegExpObject 的第 2 个子表达式相匹配的文本（如果有的话），以此类推。除了数组元素和 length 属性之外，exec() 方法还返回两个属性。index 属性声明的是匹配文本的第一个字符的位置。input 属性则存放的是被检索的字符串 string。我们可以看得出，在调用非全局的 RegExp 对象的 exec() 方法时，返回的数组与调用方法 String.match() 返回的数组是相同的。</p>
+<p>但是，当 RegExpObject 是一个全局正则表达式时，exec() 的行为就稍微复杂一些。它会在 RegExpObject 的 lastIndex 属性指定的字符处开始检索字符串 string。当 exec() 找到了与表达式相匹配的文本时，在匹配后，它将把 RegExpObject 的 lastIndex 属性设置为匹配文本的最后一个字符的下一个位置。这就是说，您可以通过反复调用 exec() 方法来遍历字符串中的所有匹配文本。当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0。</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/susufufu/p/5848956.html" target="_blank" rel="noopener">参考</a></p>
+</blockquote>
+<img src="/2018/04/15/正则表达式/2.png">
+<img src="/2018/04/15/正则表达式/3.png">
+<img src="/2018/04/15/正则表达式/6.png">
+<img src="/2018/04/15/正则表达式/7.png">
+<img src="/2018/04/15/正则表达式/8.png">
+<img src="/2018/04/15/正则表达式/9.png">
+<hr>
+<p><a href="http://regexper.com" target="_blank" rel="noopener">正则表达式工具</a></p>
+<p><a href="http://www.jsbin.com" target="_blank" rel="noopener">在线编辑html,css,js</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -774,7 +1095,7 @@ input[type="radio"]:checked + span {
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -789,7 +1110,9 @@ input[type="radio"]:checked + span {
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
