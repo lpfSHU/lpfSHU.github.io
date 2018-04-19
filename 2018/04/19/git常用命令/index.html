@@ -99,24 +99,25 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
+<meta name="keywords" content="tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://lpfSHU.github.io/2018/04/15/hello-world/index.html">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="https://lpfSHU.github.io/2018/04/19/git常用命令/index.html">
 <meta property="og:site_name" content="lpf&#39;s note">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-15T05:39:46.725Z">
+<meta property="og:updated_time" content="2018-04-19T06:08:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/15/hello-world/"/>
+  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/19/git常用命令/"/>
 
 
 
@@ -126,7 +127,7 @@
   };
 </script>
 
-  <title>Hello World | lpf's note</title>
+  <title>git常用命令 | lpf's note</title>
   
 
 
@@ -310,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/19/git常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lpf">
@@ -327,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">git常用命令</h1>
         
 
         <div class="post-meta">
@@ -339,7 +340,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T13:39:46+08:00">2018-04-15</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T13:24:32+08:00">2018-04-19</time>
             
 
             
@@ -376,15 +377,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="常用git命令"><a href="#常用git命令" class="headerlink" title="常用git命令"></a>常用git命令</h2><ul>
+<li><p>git config<br>  git config –global user.name “输入你的用户名”<br>  git config –global user.email “输入你的邮箱”<br>  git config –global credential.helper store –file ~/.my-credentials<br>  存储用户密码，每次push时，可以不必输入密码，如果是用ssh方式则不需要该命令</p>
+</li>
+<li><p>git clone <a href="http://admin@192.168.1.19:10101/r/PreciousMetal.git" target="_blank" rel="noopener">http://admin@192.168.1.19:10101/r/PreciousMetal.git</a><br>从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，admin为你的用户名</p>
+</li>
+<li><p>add commit<br>  我们把文件往Git版本库里添加的时候，是分两步执行的：<br>  第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>  第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>  git add .<br>  git rm test.txt 删除该文件<br>git commit -m ‘修改信息’</p>
+</li>
+<li><p>git remote<br>git remote add 远程库别名 <a href="http://admin@192.168.1.19:10101/r/PreciousMetal.git" target="_blank" rel="noopener">http://admin@192.168.1.19:10101/r/PreciousMetal.git</a><br>admin为你的用户名<br>git remote rm origin 删除已关联的名为origin的远程库：   </p>
+</li>
+<li><p>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</p>
+<p>git push origin master</p>
+<p>  上面命令表示，将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建。<br>  如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。<br>  git push origin :master<br>  等同于<br>  git push origin –delete master</p>
+</li>
+<li><p>git pull命令取回远程主机某个分支的更新，再与本地的指定分支合并</p>
+<p>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</p>
+<p>如果远程分支要与当前分支合并，则冒号后面的部分可以省略</p>
+</li>
+</ul>
+<ul>
+<li><p>分支<br>  查看分支：git branch</p>
+<p>  创建分支：git branch <name></name></p>
+<p>  切换分支：git checkout <name></name></p>
+<p>  创建+切换分支：git checkout -b <name></name></p>
+<p>  合并某分支到当前分支：git merge <name></name></p>
+<p>  删除分支：git branch -d <name></name></p>
+</li>
+<li><p>git checkout<br>   命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：</p>
+<p>  一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；(上一次的git commit 后,修改readme.txt 但没有执行git add,回到上一次的git commit后的结果)</p>
+<p>  一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。(修改readme.txt,并且git add,然后又修改了readme.txt, 此时执行git checkout,回到git add 后的状态)</p>
+<p>  总之，就是让这个文件回到最近一次git commit或git add时的状态。</p>
+</li>
+</ul>
 
       
     </div>
@@ -403,6 +427,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/tools/" rel="tag"># tools</a>
+          
+        </div>
+      
 
       
       
@@ -412,14 +442,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/19/函数节流和函数防抖/" rel="next" title="函数节流和函数防抖">
+                <i class="fa fa-chevron-left"></i> 函数节流和函数防抖
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/15/css3基础/" rel="prev" title="css3基础">
-                css3基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/linux常用命令/" rel="prev" title="linux常用命令">
+                linux常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -567,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用git命令"><span class="nav-number">1.</span> <span class="nav-text">常用git命令</span></a></li></ol></div>
             
 
           </div>

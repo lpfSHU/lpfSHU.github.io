@@ -99,24 +99,25 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="去抖（debounce）函数调用n秒后才会执行，如果函数在n秒内被调用的话则函数不执行，重新计算执行时间。其中debounce函数所返回的函数在被调用时，要把上下文和参数传给method。 函数的去抖动12345678910function debounce(method,delay)&amp;#123;  var timer=null;  return function()&amp;#123;    var">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://lpfSHU.github.io/2018/04/15/hello-world/index.html">
+<meta property="og:title" content="函数节流和函数防抖">
+<meta property="og:url" content="https://lpfSHU.github.io/2018/04/19/函数节流和函数防抖/index.html">
 <meta property="og:site_name" content="lpf&#39;s note">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="去抖（debounce）函数调用n秒后才会执行，如果函数在n秒内被调用的话则函数不执行，重新计算执行时间。其中debounce函数所返回的函数在被调用时，要把上下文和参数传给method。 函数的去抖动12345678910function debounce(method,delay)&amp;#123;  var timer=null;  return function()&amp;#123;    var">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-15T05:39:46.725Z">
+<meta property="og:updated_time" content="2018-04-19T05:36:00.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="函数节流和函数防抖">
+<meta name="twitter:description" content="去抖（debounce）函数调用n秒后才会执行，如果函数在n秒内被调用的话则函数不执行，重新计算执行时间。其中debounce函数所返回的函数在被调用时，要把上下文和参数传给method。 函数的去抖动12345678910function debounce(method,delay)&amp;#123;  var timer=null;  return function()&amp;#123;    var">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/15/hello-world/"/>
+  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/19/函数节流和函数防抖/"/>
 
 
 
@@ -126,7 +127,7 @@
   };
 </script>
 
-  <title>Hello World | lpf's note</title>
+  <title>函数节流和函数防抖 | lpf's note</title>
   
 
 
@@ -310,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/19/函数节流和函数防抖/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lpf">
@@ -327,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">函数节流和函数防抖</h1>
         
 
         <div class="post-meta">
@@ -339,7 +340,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T13:39:46+08:00">2018-04-15</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T12:28:32+08:00">2018-04-19</time>
             
 
             
@@ -376,16 +377,11 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h2 id="去抖（debounce）"><a href="#去抖（debounce）" class="headerlink" title="去抖（debounce）"></a>去抖（debounce）</h2><p>函数调用n秒后才会执行，如果函数在n秒内被调用的话则函数不执行，重新计算执行时间。其中debounce函数所返回的函数在被调用时，要把上下文和参数传给method。</p>
+<figure class="highlight javascript"><figcaption><span>函数的去抖动</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">method,delay</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> timer=<span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> context=<span class="keyword">this</span>, args=<span class="built_in">arguments</span>;</span><br><span class="line">    clearTimeout(timer);</span><br><span class="line">    timer=setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        method.apply(context,args);</span><br><span class="line">    &#125;,delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="函数节流（throttle）"><a href="#函数节流（throttle）" class="headerlink" title="函数节流（throttle）"></a>函数节流（throttle）</h2><p>函数预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。</p>
+<figure class="highlight javascript"><figcaption><span>函数的去抖动</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">method,duration</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> begin=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> context=<span class="keyword">this</span>, args=<span class="built_in">arguments</span>, current=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">if</span>(current-begin&gt;=duration)&#123;</span><br><span class="line">      method.apply(context,args);</span><br><span class="line">      begin=current;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。"><a href="#函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。" class="headerlink" title="函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。"></a>函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。</h5>
       
     </div>
 
@@ -403,6 +399,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
 
       
       
@@ -412,14 +414,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/15/正则表达式/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/15/css3基础/" rel="prev" title="css3基础">
-                css3基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/git常用命令/" rel="prev" title="git常用命令">
+                git常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -567,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#去抖（debounce）"><span class="nav-number">1.</span> <span class="nav-text">去抖（debounce）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数节流（throttle）"><span class="nav-number">2.</span> <span class="nav-text">函数节流（throttle）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">函数的节流和函数的去抖都是通过减少实际逻辑处理过程的执行来提高事件处理函数运行性能的手段，并没有实质上减少事件的触发次数。</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
