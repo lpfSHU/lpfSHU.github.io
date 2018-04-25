@@ -113,7 +113,7 @@
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/20/理解css3中linear-gradient/4.png">
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/20/理解css3中linear-gradient/5.png">
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/20/理解css3中linear-gradient/6.png">
-<meta property="og:updated_time" content="2018-04-20T15:23:43.534Z">
+<meta property="og:updated_time" content="2018-04-21T05:04:37.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解css3中linear-gradient">
 <meta name="twitter:description" content="渐变节点  1234background: linear-gradient(#fb3 20%, #58a 80%);&amp;lt;!-- 渐变现在出现在总高的60% 区域，剩下的部分显示为实色；色标的位置用虚线标示出来了 --&amp;gt;         12345background:linear-gradient(    red 0%,    orange 0%);         123456back">
@@ -383,15 +383,15 @@
 <h4 id="如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有一个百分比，不同颜色之间为过渡区域。"><a href="#如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有一个百分比，不同颜色之间为过渡区域。" class="headerlink" title="如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有一个百分比，不同颜色之间为过渡区域。"></a>如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有一个百分比，不同颜色之间为过渡区域。</h4><hr>
   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span><span class="selector-pseudo">:linear-gradient(</span></span><br><span class="line">    <span class="selector-tag">red</span> 0%,</span><br><span class="line">    <span class="selector-tag">red</span> 14<span class="selector-class">.3</span>%,</span><br><span class="line">    <span class="selector-tag">orange</span> 0,</span><br><span class="line">    <span class="selector-tag">orange</span> 28<span class="selector-class">.6</span>%,</span><br><span class="line">    <span class="selector-tag">yellow</span> 0,</span><br><span class="line">    <span class="selector-tag">yellow</span> 42<span class="selector-class">.9</span>%,</span><br><span class="line">    <span class="selector-tag">green</span> 0,</span><br><span class="line">    <span class="selector-tag">green</span> 57<span class="selector-class">.2</span>%,</span><br><span class="line">    <span class="selector-tag">blue</span> 0,</span><br><span class="line">    <span class="selector-tag">blue</span> 71<span class="selector-class">.5</span>%,</span><br><span class="line">    <span class="selector-tag">indigo</span> 0,</span><br><span class="line">    <span class="selector-tag">indigo</span> 85<span class="selector-class">.8</span>%,</span><br><span class="line">    <span class="selector-tag">violet</span> 0,</span><br><span class="line">    <span class="selector-tag">violet</span> 100%</span><br><span class="line">);</span><br><span class="line">&lt;!<span class="selector-tag">--</span> 如果某个色标的位置值比整个列表中在它之前的色标的位置值都要小，则该色标的位置值会被设置为它前面所有色标位置值的最大值 <span class="selector-tag">--</span>&gt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
   <img src="/2018/04/20/理解css3中linear-gradient/5.png">
-<h4 id="如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。"><a href="#如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。" class="headerlink" title="如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。"></a>如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。</h4><p>  **</p>
+<h4 id="如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。"><a href="#如果linear-gradient中有多个-gt-2-颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。" class="headerlink" title="如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。"></a>如果linear-gradient中有多个(&gt;2)颜色，且每个颜色只有两个百分比，不同颜色之间为过渡区域，同一个颜色的百分比区间是纯色填充。</h4><hr>
 <h3 id="渐变角度"><a href="#渐变角度" class="headerlink" title="渐变角度"></a>渐变角度</h3>  <img src="/2018/04/20/理解css3中linear-gradient/6.png">
 <p>  C点渐变容器中心点，A是通过C点垂直线与通过C点渐变线的夹角，这个角称为渐变角度。</p>
 <ul>
 <li>使用关键词：to top、to bottom、to left、to right、to top right、to top left、to bottom right和to bottom left</li>
-<li><p>使用带单位数字定义角度，比如45deg、1turn等</p>
-<p>**<br><a href="https://www.w3cplus.com/css3/do-you-really-understand-css-linear-gradients.html" target="_blank" rel="noopener">参考1</a><br><a href="https://www.jianshu.com/p/bf862535dd30" target="_blank" rel="noopener">参考2</a></p>
-</li>
+<li>使用带单位数字定义角度，比如45deg、1turn等</li>
 </ul>
+<hr>
+<p> <a href="https://www.w3cplus.com/css3/do-you-really-understand-css-linear-gradients.html" target="_blank" rel="noopener">参考1</a><br> <a href="https://www.jianshu.com/p/bf862535dd30" target="_blank" rel="noopener">参考2</a></p>
 
       
     </div>
@@ -434,6 +434,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/21/js中的dom操作/" rel="prev" title="js中的dom操作">
+                js中的dom操作 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +511,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -530,7 +534,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -545,11 +551,6 @@
               
                 <span class="links-of-author-item">
                   <a href="https://github.com/lpfSHU" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:1021760171@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
