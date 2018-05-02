@@ -99,22 +99,28 @@
 
 
 
-  <meta name="keywords" content="js">
+  <meta name="description" content="typeof实现的原理不同的对象在底层都表示为二进制， 在 JavaScript 中二进制前三位都为 0 的话会被判断为 object 类型， null 的二进制表示是全 0， 自然前三位也是 0， 所以执行 typeof 时会返回“object” js继承与原型链1234567function Parent(props)&amp;#123;	this.props = props&amp;#125;functio">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js基础">
-<meta property="og:url" content="https://lpfSHU.github.io/2018/04/25/js基础/index.html">
+<meta property="og:url" content="https://lpfSHU.github.io/2018/04/27/js基础/index.html">
 <meta property="og:site_name" content="lpf&#39;s note">
+<meta property="og:description" content="typeof实现的原理不同的对象在底层都表示为二进制， 在 JavaScript 中二进制前三位都为 0 的话会被判断为 object 类型， null 的二进制表示是全 0， 自然前三位也是 0， 所以执行 typeof 时会返回“object” js继承与原型链1234567function Parent(props)&amp;#123;	this.props = props&amp;#125;functio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-25T13:51:35.258Z">
+<meta property="og:image" content="https://lpfshu.github.io/2018/04/27/js基础/1.png">
+<meta property="og:image" content="https://lpfshu.github.io/2018/04/27/js基础/2.png">
+<meta property="og:updated_time" content="2018-04-26T11:31:18.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js基础">
+<meta name="twitter:description" content="typeof实现的原理不同的对象在底层都表示为二进制， 在 JavaScript 中二进制前三位都为 0 的话会被判断为 object 类型， null 的二进制表示是全 0， 自然前三位也是 0， 所以执行 typeof 时会返回“object” js继承与原型链1234567function Parent(props)&amp;#123;	this.props = props&amp;#125;functio">
+<meta name="twitter:image" content="https://lpfshu.github.io/2018/04/27/js基础/1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/25/js基础/"/>
+  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/27/js基础/"/>
 
 
 
@@ -292,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/25/js基础/">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/27/js基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lpf">
@@ -321,7 +327,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-25T21:51:21+08:00">2018-04-25</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T21:51:21+08:00">2018-04-27</time>
             
 
             
@@ -358,7 +364,12 @@
       
 
       
-        
+        <h3 id="typeof实现的原理"><a href="#typeof实现的原理" class="headerlink" title="typeof实现的原理"></a>typeof实现的原理</h3><p>不同的对象在底层都表示为二进制， 在 JavaScript 中二进制前三位都为 0 的话会被判断为 object 类型， null 的二进制表示是全 0， 自然前三位也是 0， 所以执行 typeof 时会返回“object”</p>
+<h3 id="js继承与原型链"><a href="#js继承与原型链" class="headerlink" title="js继承与原型链"></a>js继承与原型链</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.props = props</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line">	Parent3.call(<span class="keyword">this</span>, props)</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype.__proto__ = Parent.prototype</span><br></pre></td></tr></table></figure>
+<img src="/2018/04/27/js基础/1.png">
+<img src="/2018/04/27/js基础/2.png">
+<p>一个构造函数Foo通过 new 操作返回一个实例f，构造函数Foo的protsotype属性和实例f的<strong>proto</strong>属性指向相同，为实例f的原型，该原型的constructor属性指向构造函数Foo。原型对象的<strong>proto</strong>属性指向该原型对象的原型对象（父类的prototype属性）。<br>instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。</p>
+
       
     </div>
 
@@ -448,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -524,6 +544,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof实现的原理"><span class="nav-number">1.</span> <span class="nav-text">typeof实现的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js继承与原型链"><span class="nav-number">2.</span> <span class="nav-text">js继承与原型链</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
