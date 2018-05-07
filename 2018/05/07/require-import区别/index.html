@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="lpf&#39;s note">
 <meta property="og:description" content="语法区别require/exports 的用法有以下三种写法：123const fs = require(&apos;fs&apos;)exports.fs = fsmodule.exports = fs import/export 的写法就多种多样：123456789101112import fs from &apos;fs&apos;import &amp;#123;default as fs&amp;#125; from &apos;fs&apos;import *">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-07T07:50:52.000Z">
+<meta property="og:updated_time" content="2018-05-07T08:10:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="require import区别">
 <meta name="twitter:description" content="语法区别require/exports 的用法有以下三种写法：123const fs = require(&apos;fs&apos;)exports.fs = fsmodule.exports = fs import/export 的写法就多种多样：123456789101112import fs from &apos;fs&apos;import &amp;#123;default as fs&amp;#125; from &apos;fs&apos;import *">
@@ -417,6 +417,7 @@
 <li><p><a href="http://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%8A%A0%E8%BD%BD" target="_blank" rel="noopener">循环加载</a></p>
 </li>
 </ul>
+<p>最后顺便说一下：在CommonJS中，require能看到的只有 module.exports 这个对象，它是看不到 exports 对象的，exports 只是对 module.exports 的引用。<br>比如 <code>exports.a = function(){}</code> 相当于 <code>module.exports.a = function(){}</code><br>但是 <code>exports = function(){}</code> 与 <code>module.exports = function(){}</code> 不同，前者把 exports 对象的引用地址改为了一个函数的地址</p>
 
       
     </div>
