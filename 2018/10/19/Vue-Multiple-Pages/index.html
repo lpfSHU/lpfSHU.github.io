@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
-<meta name="keywords" content="tools">
+  <meta name="description" content="最近搭了一个vue的webpack开发工作流，是一个vue多页应用脚手架，已放到了github上。 这里是链接">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="https://lpfSHU.github.io/2018/04/19/git常用命令/index.html">
+<meta property="og:title" content="Vue Multiple Pages">
+<meta property="og:url" content="https://lpfSHU.github.io/2018/10/19/Vue-Multiple-Pages/index.html">
 <meta property="og:site_name" content="lpf&#39;s note">
-<meta property="og:description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
+<meta property="og:description" content="最近搭了一个vue的webpack开发工作流，是一个vue多页应用脚手架，已放到了github上。 这里是链接">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-02T12:30:20.000Z">
+<meta property="og:updated_time" content="2018-10-16T13:47:52.021Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="常用git命令 git config  git config –global user.name “输入你的用户名”  git config –global user.email “输入你的邮箱”  git config –global credential.helper store –file ~/.my-credentials  存储用户密码，每次push时，可以不必输入密码，如果是用ssh">
+<meta name="twitter:title" content="Vue Multiple Pages">
+<meta name="twitter:description" content="最近搭了一个vue的webpack开发工作流，是一个vue多页应用脚手架，已放到了github上。 这里是链接">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lpfSHU.github.io/2018/04/19/git常用命令/"/>
+  <link rel="canonical" href="https://lpfSHU.github.io/2018/10/19/Vue-Multiple-Pages/"/>
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>git常用命令 | lpf's note</title>
+  <title>Vue Multiple Pages | lpf's note</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/04/19/git常用命令/">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/10/19/Vue-Multiple-Pages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lpf">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">Vue Multiple Pages</h1>
         
 
         <div class="post-meta">
@@ -324,7 +324,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T13:24:32+08:00">2018-04-19</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-19T21:11:47+08:00">2018-10-19</time>
             
 
             
@@ -361,46 +361,8 @@
       
 
       
-        <h2 id="常用git命令"><a href="#常用git命令" class="headerlink" title="常用git命令"></a>常用git命令</h2><ul>
-<li><p>git config<br>  git config –global user.name “输入你的用户名”<br>  git config –global user.email “输入你的邮箱”<br>  git config –global credential.helper store –file ~/.my-credentials<br>  存储用户密码，每次push时，可以不必输入密码，如果是用ssh方式则不需要该命令</p>
-</li>
-<li><p>git clone <a href="http://admin@192.168.1.19:10101/r/PreciousMetal.git" target="_blank" rel="noopener">http://admin@192.168.1.19:10101/r/PreciousMetal.git</a><br>从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，admin为你的用户名</p>
-</li>
-<li><p>add commit<br>  我们把文件往Git版本库里添加的时候，是分两步执行的：<br>  第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>  第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>  git add .<br>  git rm test.txt 删除该文件<br>git commit -m ‘修改信息’</p>
-</li>
-<li><p>git remote<br>git remote add 远程库别名 <a href="http://admin@192.168.1.19:10101/r/PreciousMetal.git" target="_blank" rel="noopener">http://admin@192.168.1.19:10101/r/PreciousMetal.git</a><br>admin为你的用户名<br>git remote rm origin 删除已关联的名为origin的远程库：   </p>
-</li>
-<li><p>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</p>
-<p>git push origin master</p>
-<p>  上面命令表示，将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建。<br>  如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。<br>  git push origin :master<br>  等同于<br>  git push origin –delete master</p>
-</li>
-<li><p>git pull命令取回远程主机某个分支的更新，再与本地的指定分支合并</p>
-<p>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</p>
-<p>如果远程分支要与当前分支合并，则冒号后面的部分可以省略</p>
-</li>
-</ul>
-<ul>
-<li><p>分支<br>  查看分支：git branch</p>
-<p>  创建分支：git branch <name></name></p>
-<p>  切换分支：git checkout <name></name></p>
-<p>  创建+切换分支：git checkout -b <name></name></p>
-<p>  合并某分支到当前分支：git merge <name></name></p>
-<p>  删除分支：git branch -d <name></name></p>
-</li>
-<li><p>git checkout<br>   命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：</p>
-<p>  一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；(上一次的git commit 后,修改readme.txt 但没有执行git add,回到上一次的git commit后的结果)</p>
-<p>  一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。(修改readme.txt,并且git add,然后又修改了readme.txt, 此时执行git checkout,回到git add 后的状态)</p>
-<p>  总之，就是让这个文件回到最近一次git commit或git add时的状态。</p>
-</li>
-<li><p>格式化与多余的空白字符<br>  格式化与多余的空白字符是许多开发人员在协作时，特别是在跨平台情况下，不时会遇到的令人头疼的琐碎的问题。 由于编辑器的不同或者文件行尾的换行符在 Windows 下被替换了，一些细微的空格变化会不经意地混入提交的补丁或其它协作成果中。 不用怕，Git 提供了一些配置项来帮助你解决这些问题。</p>
-<p>  core.autocrlf<br>  假如你正在 Windows 上写程序，而你的同伴用的是其他系统（或相反），你可能会遇到 CRLF 问题。 这是因为 Windows 使用回车（CR）和换行（LF）两个字符来结束一行，而 Mac 和 Linux 只使用换行（LF）一个字符。 虽然这是小问题，但它会极大地扰乱跨平台协作。许多 Windows 上的编辑器会悄悄把行尾的换行字符转换成回车和换行，或在用户按下 Enter 键时，插入回车和换行两个字符。</p>
-<p>  Git 可以在你提交时自动地把回车和换行转换成换行，而在检出代码时把换行转换成回车和换行。 你可以用 core.autocrlf 来打开此项功能。 如果是在 Windows 系统上，把它设置成 true，这样在检出代码时，换行会被转换成回车和换行：</p>
-<p>  $ git config –global core.autocrlf true<br>  如果使用以换行作为行结束符的 Linux 或 Mac，你不需要 Git 在检出文件时进行自动的转换；然而当一个以回车加换行作为行结束符的文件不小心被引入时，你肯定想让 Git 修正。 你可以把 core.autocrlf 设置成 input 来告诉 Git 在提交时把回车和换行转换成换行，检出时不转换：</p>
-<p>  $ git config –global core.autocrlf input<br>  这样在 Windows 上的检出文件中会保留回车和换行，而在 Mac 和 Linux 上，以及版本库中会保留换行。</p>
-<p>  如果你是 Windows 程序员，且正在开发仅运行在 Windows 上的项目，可以设置 false 取消此功能，把回车保留在版本库中：</p>
-<p>  $ git config –global core.autocrlf false</p>
-</li>
-</ul>
+        <p>最近搭了一个vue的webpack开发工作流，是一个vue多页应用脚手架，已放到了github上。</p>
+<p><a href="https://github.com/lpfSHU/Starter-for-Vue-Multiple-Pages" target="_blank">这里是链接</a></p>
 
       
     </div>
@@ -421,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag"># tools</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
         </div>
       
@@ -434,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/19/函数节流和函数防抖/" rel="next" title="函数节流和函数防抖">
-                <i class="fa fa-chevron-left"></i> 函数节流和函数防抖
+              <a href="/2018/10/18/js-number/" rel="next" title="js number">
+                <i class="fa fa-chevron-left"></i> js number
               </a>
             
           </div>
@@ -444,8 +406,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/19/linux常用命令/" rel="prev" title="linux常用命令">
-                linux常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/31/css水平垂直居中/" rel="prev" title="css水平垂直居中">
+                css水平垂直居中 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -495,17 +457,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -588,22 +541,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用git命令"><span class="nav-number">1.</span> <span class="nav-text">常用git命令</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
