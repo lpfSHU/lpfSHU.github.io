@@ -99,20 +99,28 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lpf&#39;s note">
-<meta property="og:url" content="https://lpfSHU.github.io/archives/2018/10/index.html">
+  <meta name="description" content="Micro-Task 与 Macro-Task事件循环中的异步队列有两种：macro（宏任务）队列和 micro（微任务）队列。 常见的 macro-task 比如： setTimeout、setInterval、 setImmediate、script（整体代码）、 I/O 操作、UI 渲染等。常见的 micro-task 比如: process.nextTick、Promise、Mutatio">
+<meta name="keywords" content="浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器中的事件循环">
+<meta property="og:url" content="https://lpfSHU.github.io/2018/11/01/浏览器中的事件循环/index.html">
 <meta property="og:site_name" content="lpf&#39;s note">
+<meta property="og:description" content="Micro-Task 与 Macro-Task事件循环中的异步队列有两种：macro（宏任务）队列和 micro（微任务）队列。 常见的 macro-task 比如： setTimeout、setInterval、 setImmediate、script（整体代码）、 I/O 操作、UI 渲染等。常见的 micro-task 比如: process.nextTick、Promise、Mutatio">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://lpfshu.github.io/2018/11/01/浏览器中的事件循环/1.webp">
+<meta property="og:image" content="https://lpfshu.github.io/2018/11/01/浏览器中的事件循环/1.webp">
+<meta property="og:updated_time" content="2018-11-01T05:07:17.418Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lpf&#39;s note">
+<meta name="twitter:title" content="浏览器中的事件循环">
+<meta name="twitter:description" content="Micro-Task 与 Macro-Task事件循环中的异步队列有两种：macro（宏任务）队列和 micro（微任务）队列。 常见的 macro-task 比如： setTimeout、setInterval、 setImmediate、script（整体代码）、 I/O 操作、UI 渲染等。常见的 micro-task 比如: process.nextTick、Promise、Mutatio">
+<meta name="twitter:image" content="https://lpfshu.github.io/2018/11/01/浏览器中的事件循环/1.webp">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lpfSHU.github.io/archives/2018/10/"/>
+  <link rel="canonical" href="https://lpfSHU.github.io/2018/11/01/浏览器中的事件循环/"/>
 
 
 
@@ -122,7 +130,7 @@
   };
 </script>
 
-  <title>Archive | lpf's note</title>
+  <title>浏览器中的事件循环 | lpf's note</title>
   
 
 
@@ -179,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,22 +259,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -290,265 +282,176 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lpfSHU.github.io/2018/11/01/浏览器中的事件循环/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lpf">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lpf's note">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">浏览器中的事件循环</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T12:44:27+08:00">2018-11-01</time>
+            
+
+            
+            
+
+            
+          </span>
+
           
-        
-        Um..! 25 posts in total. Keep on posting.
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/31/css水平垂直居中/" itemprop="url">
-              
-                <span itemprop="name">css水平垂直居中</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-31T13:52:52+08:00"
-              content="2018-10-31" >
-          10-31
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/19/Vue-Multiple-Pages/" itemprop="url">
-              
-                <span itemprop="name">Vue Multiple Pages</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-19T21:11:47+08:00"
-              content="2018-10-19" >
-          10-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/18/js-number/" itemprop="url">
-              
-                <span itemprop="name">js number</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-18T21:34:16+08:00"
-              content="2018-10-18" >
-          10-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h4 id="Micro-Task-与-Macro-Task"><a href="#Micro-Task-与-Macro-Task" class="headerlink" title="Micro-Task 与 Macro-Task"></a>Micro-Task 与 Macro-Task</h4><p>事件循环中的异步队列有两种：macro（宏任务）队列和 micro（微任务）队列。</p>
+<p>常见的 macro-task 比如： setTimeout、setInterval、 setImmediate、script（整体代码）、 I/O 操作、UI 渲染等。<br>常见的 micro-task 比如: process.nextTick、Promise、MutationObserver 等。</p>
+<h4 id="Event-Loop-过程解析"><a href="#Event-Loop-过程解析" class="headerlink" title="Event Loop 过程解析"></a>Event Loop 过程解析</h4><p>一个完整的 Event Loop 过程，可以概括为以下阶段：</p>
+<ul>
+<li><p>初始状态：调用栈空。micro 队列空，macro 队列里有且只有一个 script 脚本（整体代码）。</p>
+</li>
+<li><p>全局上下文（script 标签）被推入调用栈，同步代码执行。在执行的过程中，通过对一些接口的调用，可以产生新的 macro-task 与 micro-task，它们会分别被推入各自的任务队列里。同步代码执行完了，script 脚本会被移出 macro 队列，这个过程本质上是队列的 macro-task 的执行和出队的过程。</p>
+</li>
+<li><p>上一步我们出队的是一个 macro-task，这一步我们处理的是 micro-task。但需要注意的是：当 macro-task 出队时，任务是一个一个执行的；而 micro-task 出队时，任务是一队一队执行的（如下图所示）。因此，我们处理 micro 队列这一步，会逐个执行队列中的任务并把它出队，直到队列被清空。…</p>
+<img src="/2018/11/01/浏览器中的事件循环/1.webp">
+</li>
+<li><p>执行渲染操作，更新界面</p>
+</li>
+<li><p>检查是否存在 Web worker 任务，如果有，则对其进行处理</p>
+</li>
+<li><p>（上述过程循环往复，直到两个队列都清空）</p>
+<img src="/2018/11/01/浏览器中的事件循环/1.webp"></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/18/JSON-Schema/" itemprop="url">
-              
-                <span itemprop="name">JSON Schema</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-18T19:28:33+08:00"
-              content="2018-10-18" >
-          10-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/16/页面加载/" itemprop="url">
-              
-                <span itemprop="name">页面加载</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-16T13:30:20+08:00"
-              content="2018-10-16" >
-          10-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/04/实现一个简易的koa/" itemprop="url">
-              
-                <span itemprop="name">实现一个简易的koa</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-04T15:27:40+08:00"
-              content="2018-10-04" >
-          10-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/浏览器/" rel="tag"># 浏览器</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/31/css水平垂直居中/" rel="next" title="css水平垂直居中">
+                <i class="fa fa-chevron-left"></i> css水平垂直居中
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -569,8 +472,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -655,6 +567,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Micro-Task-与-Macro-Task"><span class="nav-number">1.</span> <span class="nav-text">Micro-Task 与 Macro-Task</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Event-Loop-过程解析"><span class="nav-number">2.</span> <span class="nav-text">Event Loop 过程解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -776,6 +704,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
+
+
 
   
 
