@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/15/正则表达式/7.png">
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/15/正则表达式/8.png">
 <meta property="og:image" content="https://lpfshu.github.io/2018/04/15/正则表达式/9.png">
-<meta property="og:updated_time" content="2018-04-19T05:36:00.229Z">
+<meta property="og:updated_time" content="2019-03-16T13:28:41.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="js正则表达式  RegExp对象实例化RegExp对象 字面量 var reg = /\bis\b/g  构造函数 var reg = new RegExp(&amp;#39;\\bis\\b&amp;#39;, &amp;#39;g&amp;#39;); g: global 执行全局匹配 i: ignore case 执行对大小写不敏感的匹配 m: multiple lines 多行搜索       元字符正则表达式由两种基">
@@ -265,6 +265,22 @@
 
   
     
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
 
   
 
@@ -467,11 +483,19 @@
 <p><code>Byr(on|Ca)sper</code></p>
 <h4 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h4><p><code>2015-12-25</code> =&gt; <code>12/25/2015</code></p>
 <p><code>&#39;2015-12-25&#39;.replace(/(\d{4})-(\d{2})-(\d{2})/g, &#39;$2/$3/$1&#39;)</code></p>
+<pre>
+ /* 例：给定字符串 str，检查其是否包含连续重复的字母（a-z），包含返回 true，否则返回 false */
+  function containsRepeatingLetter(str) {
+      var reg = /([a-z])\1/; // \1表示引用第一个分组匹配到的内容
+      return reg.test(str);
+  }
+</pre>
+
 <h4 id="忽略分组"><a href="#忽略分组" class="headerlink" title="忽略分组"></a>忽略分组</h4><p>不希望捕获某些分组，只需要在分组内加上<code>?:</code>就可以了</p>
 <p><code>(?:Byron).(ok)</code></p>
 <p>在开发中，我们经常会碰到将<code>abc-xyz</code>这类格式的字符串转为<code>AbcXyz</code>形式的驼峰字符串进行处理，请编写代码实现这个<code>camelize(str)</code>方法：</p>
 <pre>var camelize = function (str) {
-  return str.replace(/(?:^|[-_])(\w)/g, function(_, c) {
+  return str.replace(/(?:^|[-_])(\w)?/g, function(_, c) {
          return c ? c.toUpperCase() : '';
   });
 }</pre>
@@ -761,7 +785,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate"> 
     <i class="fa fa-user"></i>
   </span>
